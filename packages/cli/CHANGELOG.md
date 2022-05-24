@@ -1,5 +1,11 @@
 # @d/cli
 
+## 3.0.1-beta.0
+
+### Patch Changes
+
+- 预发测试
+
 ## 3.0.0
 
 ### Major Changes

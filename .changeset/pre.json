@@ -1,0 +1,14 @@
+{
+  "mode": "pre",
+  "tag": "next",
+  "initialVersions": {
+    "docs": "0.0.0",
+    "@d/cli": "3.0.1-beta.0",
+    "@d/create": "3.0.0",
+    "@d/eslint": "3.0.0",
+    "@d/tsconfig": "1.0.0"
+  },
+  "changesets": [
+    "lovely-seals-provide"
+  ]
+}
