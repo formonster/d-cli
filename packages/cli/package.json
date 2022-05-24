@@ -1,6 +1,6 @@
 {
   "name": "@d/cli",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -13,6 +13,9 @@
   },
   "bin": {
     "d": "./dist/index.mjs"
+  },
+  "publishConfig": {
+    "registry": "http://localhost:4873"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
