@@ -1,6 +1,6 @@
 {
   "name": "@d/eslint",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
@@ -11,5 +11,8 @@
   "publishConfig": {
     "access": "public",
     "registry": "http://localhost:4873"
-  }
+  },
+  "files": [
+    "index.js"
+  ]
 }
