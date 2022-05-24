@@ -1,5 +1,21 @@
 # @d/cli
 
+## 3.0.2
+
+### Patch Changes
+
+- 测试
+- Updated dependencies
+  - @d/create@3.0.1
+
+## 3.0.2-next.0
+
+### Patch Changes
+
+- 测试
+- Updated dependencies
+  - @d/create@3.0.1-next.0
+
 ## 3.0.1
 
 ### Patch Changes

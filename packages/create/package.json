@@ -1,6 +1,6 @@
 {
   "name": "@d/create",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "tsup --watch",
     "test": "d create test",
+    "prepublish": "pnpm run build",
     "build": "tsup",
     "lint": "eslint *.ts*"
   },
