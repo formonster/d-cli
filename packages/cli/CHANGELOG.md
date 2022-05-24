@@ -1,5 +1,11 @@
 # @d/cli
 
+## 3.0.1
+
+### Patch Changes
+
+- 0ffcfe7: 预发测试
+
 ## 3.0.1-beta.0
 
 ### Patch Changes
