@@ -3,8 +3,6 @@ import create from '@d/create';
 
 const program = new Command();
 
-console.log('d cli')
-
 program
   .command('create <app-name>')
   .description('创建一个新项目')

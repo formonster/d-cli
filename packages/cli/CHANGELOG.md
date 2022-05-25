@@ -1,5 +1,11 @@
 # @d/cli
 
+## 3.0.6
+
+### Patch Changes
+
+- 测试
+
 ## 3.0.5
 
 ### Patch Changes
