@@ -1,5 +1,11 @@
 # @d/cli
 
+## 3.0.5
+
+### Patch Changes
+
+- 修改命令名称
+
 ## 3.0.4
 
 ### Patch Changes

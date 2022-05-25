@@ -1,6 +1,6 @@
 {
   "name": "@d/cli",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -13,7 +13,7 @@
     "lint": "eslint *.ts*"
   },
   "bin": {
-    "d": "./dist/index.js"
+    "ding": "./dist/index.js"
   },
   "publishConfig": {
     "registry": "http://localhost:4873"
