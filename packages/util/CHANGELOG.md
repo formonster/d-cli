@@ -1,5 +1,11 @@
 # @d/create
 
+## 3.0.3
+
+### Patch Changes
+
+- 优化输出日志
+
 ## 3.0.2
 
 ### Patch Changes
