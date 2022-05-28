@@ -57,6 +57,14 @@ async function createProject(projectName: string, type: ProjectTypeKeys) {
     cwd: `${process.cwd()}/${projectName}`,
   });
 
+  await shellUtil.spawn("git", ["branch", "-M", "main"], {
+    cwd: `${process.cwd()}/${projectName}`,
+  });
+
+  await shellUtil.spawn("git", ["commit", "-m", "first commit"], {
+    cwd: `${process.cwd()}/${projectName}`,
+  });
+
   console.log(chalk.green(`初始化${projectName}项目成功`));
 }
 

@@ -1,5 +1,11 @@
 # @d/create
 
+## 3.0.5
+
+### Patch Changes
+
+- git 初始化
+
 ## 3.0.4
 
 ### Patch Changes
