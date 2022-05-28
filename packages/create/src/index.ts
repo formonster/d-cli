@@ -17,7 +17,7 @@ async function create(projectName: string, options: any) {
   }
 
   console.log("");
-  console.log("🐳", chalk.gray("您的项目名："), chalk.yellow(projectName));
+  console.log("🐳", chalk.gray("您的项目名:"), chalk.yellow(projectName));
   console.log("");
 
   const type = await selectProject();
@@ -72,8 +72,6 @@ async function createProject(projectName: string, type: ProjectTypeKeys) {
     cwd: `${process.cwd()}/${projectName}`,
     showLog: false,
   });
-
-  console.log(chalk.green(`初始化${projectName}项目成功`));
 }
 
 async function initDependency(projectName: string) {
@@ -81,7 +79,7 @@ async function initDependency(projectName: string) {
     {
       name: "action",
       type: "list",
-      message: `请你选择需要的项目:`,
+      message: `请你选择包管理工具:`,
       choices: ["pnpm", "yarn", "npm"].map((item) => ({
         name: item,
         value: item,
@@ -92,6 +90,16 @@ async function initDependency(projectName: string) {
   await shellUtil.spawn(action, ["install"], {
     cwd: `${process.cwd()}/${projectName}`,
   });
+
+  console.log(
+    "\n🐳",
+    chalk.yellowBright(projectName),
+    chalk.green(`初始化完成`)
+  );
+
+  console.log("\n🐳", chalk.yellowBright("$"), chalk.gray(`cd ${projectName}`));
+  console.log("\n🐳", chalk.yellowBright("$"), chalk.gray("yarn dev"));
+  console.log();
 }
 
 export default create;
