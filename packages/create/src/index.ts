@@ -57,11 +57,15 @@ async function createProject(projectName: string, type: ProjectTypeKeys) {
     cwd: `${process.cwd()}/${projectName}`,
   });
 
-  await shellUtil.spawn("git", ["branch", "-M", "main"], {
+  await shellUtil.spawn("git", ["add", "."], {
     cwd: `${process.cwd()}/${projectName}`,
   });
 
   await shellUtil.spawn("git", ["commit", "-m", "first commit"], {
+    cwd: `${process.cwd()}/${projectName}`,
+  });
+
+  await shellUtil.spawn("git", ["branch", "-M", "main"], {
     cwd: `${process.cwd()}/${projectName}`,
   });
 
