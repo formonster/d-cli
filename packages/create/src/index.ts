@@ -44,13 +44,19 @@ async function selectProject(): Promise<ProjectTypeKeys> {
 async function createProject(projectName: string, type: ProjectTypeKeys) {
   const currentProjectInfo = projectInfo[type];
 
-  await shellUtil.spawn("git", [
-    "clone",
-    "-b",
-    currentProjectInfo.branch,
-    currentProjectInfo.repo,
-    projectName,
-  ]);
+  await shellUtil.spawn(
+    "git",
+    [
+      "clone",
+      "-b",
+      currentProjectInfo.branch,
+      currentProjectInfo.repo,
+      projectName,
+    ],
+    {
+      showLog: false,
+    }
+  );
   await shellUtil.spawn("rm", ["-rf", `./${projectName}/.git`]);
 
   await shellUtil.spawn("git", ["init"], {
@@ -98,7 +104,7 @@ async function initDependency(projectName: string) {
   );
 
   console.log("\n🐳", chalk.yellowBright("$"), chalk.gray(`cd ${projectName}`));
-  console.log("\n🐳", chalk.yellowBright("$"), chalk.gray("yarn dev"));
+  console.log("🐳", chalk.yellowBright("$"), chalk.gray("yarn dev"));
   console.log();
 }
 
