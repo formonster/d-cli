@@ -1,6 +1,6 @@
 {
-  "name": "@d/create",
-  "version": "3.0.2",
+  "name": "@d/util",
+  "version": "3.0.1",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -21,7 +21,6 @@
   "devDependencies": {
     "@d/eslint": "workspace:*",
     "@d/tsconfig": "workspace:*",
-    "@d/util": "workspace:*",
     "@types/inquirer": "^8.2.1",
     "eslint": "^7.32.0",
     "tsup": "^5.12.8",

@@ -1,5 +1,13 @@
 # @d/cli
 
+## 3.0.8
+
+### Patch Changes
+
+- 初步完成创建项目脚手架
+- Updated dependencies
+  - @d/create@3.0.2
+
 ## 3.0.7
 
 ### Patch Changes

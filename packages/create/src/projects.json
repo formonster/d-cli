@@ -1,0 +1,14 @@
+{
+  "spa": {
+    "repo": "https://github.com/formonster/d-spa-vite-react-ts-frame.git",
+    "branch": "main"
+  },
+  "ssr": {
+    "repo": "https://github.com/formonster/d-ssr-nextjs-ts-frame.git",
+    "branch": "main"
+  },
+  "taro": {
+    "repo": "http://icode.kaikeba.com/feteam/taro-kit.git",
+    "branch": "main"
+  }
+}
