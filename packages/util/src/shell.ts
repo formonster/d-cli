@@ -2,13 +2,11 @@ import childProcess from "child_process";
 
 export const spawn = (
   command: string,
-  options?: childProcess.SpawnOptionsWithoutStdio | string[] | undefined
+  args?: string[],
+  options?: childProcess.SpawnOptionsWithoutStdio | undefined
 ) => {
   return new Promise((resolve, reject) => {
-    const ls = childProcess.spawn(
-      command,
-      options as childProcess.SpawnOptionsWithoutStdio
-    );
+    const ls = childProcess.spawn(command, args, options);
 
     ls.stdout.on("data", (data) => {
       console.log(`${data}`);

@@ -1,5 +1,11 @@
 # @d/create
 
+## 3.0.2
+
+### Patch Changes
+
+- 初始化依赖
+
 ## 3.0.1
 
 ### Patch Changes

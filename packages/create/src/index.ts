@@ -22,6 +22,7 @@ async function create(projectName: string, options: any) {
 
   const type = await selectProject();
   await createProject(projectName, type);
+  await initDependency(projectName);
 }
 
 async function selectProject(): Promise<ProjectTypeKeys> {
@@ -30,12 +31,10 @@ async function selectProject(): Promise<ProjectTypeKeys> {
       name: "action",
       type: "list",
       message: `请你选择需要的项目:`,
-      choices: [
-        ...Object.keys(projectInfo).map((item) => ({
-          name: item,
-          value: item,
-        })),
-      ],
+      choices: Object.keys(projectInfo).map((item) => ({
+        name: item,
+        value: item,
+      })),
     },
   ]);
 
@@ -54,7 +53,29 @@ async function createProject(projectName: string, type: ProjectTypeKeys) {
   ]);
   await shellUtil.spawn("rm", ["-rf", `./${projectName}/.git`]);
 
+  await shellUtil.spawn("git", ["init"], {
+    cwd: `${process.cwd()}/${projectName}`,
+  });
+
   console.log(chalk.green(`初始化${projectName}项目成功`));
+}
+
+async function initDependency(projectName: string) {
+  const { action } = await inquirer.prompt([
+    {
+      name: "action",
+      type: "list",
+      message: `请你选择需要的项目:`,
+      choices: ["pnpm", "yarn", "npm"].map((item) => ({
+        name: item,
+        value: item,
+      })),
+    },
+  ]);
+
+  await shellUtil.spawn(action, ["install"], {
+    cwd: `${process.cwd()}/${projectName}`,
+  });
 }
 
 export default create;
