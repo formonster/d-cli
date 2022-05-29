@@ -1,14 +1,17 @@
 {
   "spa": {
     "repo": "https://github.com/formonster/d-spa-vite-react-ts-frame.git",
-    "branch": "main"
+    "branch": "main",
+    "startScript": "yarn dev"
   },
   "ssr": {
     "repo": "https://github.com/formonster/d-ssr-nextjs-ts-frame.git",
-    "branch": "main"
+    "branch": "main",
+    "startScript": "yarn dev"
   },
   "taro": {
     "repo": "https://github.com/formonster/d-taro-ts-frame.git",
-    "branch": "main"
+    "branch": "main",
+    "startScript": "yarn dev:weapp"
   }
 }

@@ -22,7 +22,7 @@ async function create(projectName: string, options: any) {
 
   const type = await selectProject();
   await createProject(projectName, type);
-  await initDependency(projectName);
+  await initDependency(projectName, type);
 }
 
 async function selectProject(): Promise<ProjectTypeKeys> {
@@ -80,7 +80,8 @@ async function createProject(projectName: string, type: ProjectTypeKeys) {
   });
 }
 
-async function initDependency(projectName: string) {
+async function initDependency(projectName: string, type: ProjectTypeKeys) {
+  const currentProjectInfo = projectInfo[type];
   const { action } = await inquirer.prompt([
     {
       name: "action",
@@ -104,7 +105,11 @@ async function initDependency(projectName: string) {
   );
 
   console.log("\n🐳", chalk.yellowBright("$"), chalk.gray(`cd ${projectName}`));
-  console.log("🐳", chalk.yellowBright("$"), chalk.gray("yarn dev"));
+  console.log(
+    "🐳",
+    chalk.yellowBright("$"),
+    chalk.gray(currentProjectInfo.startScript)
+  );
   console.log();
 }
 

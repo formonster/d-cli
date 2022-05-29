@@ -1,5 +1,11 @@
 # @d/create
 
+## 3.0.11
+
+### Patch Changes
+
+- 安项目配置启动指令
+
 ## 3.0.10
 
 ### Patch Changes
