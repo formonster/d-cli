@@ -8,7 +8,7 @@
     "branch": "main"
   },
   "taro": {
-    "repo": "http://icode.kaikeba.com/feteam/taro-kit.git",
+    "repo": "https://github.com/formonster/d-taro-ts-frame.git",
     "branch": "main"
   }
 }

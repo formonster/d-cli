@@ -1,5 +1,12 @@
 # @d/cli
 
+## 3.0.16
+
+### Patch Changes
+
+- Updated dependencies
+  - @d/create@3.0.10
+
 ## 3.0.15
 
 ### Patch Changes

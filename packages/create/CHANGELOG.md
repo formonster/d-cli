@@ -1,5 +1,11 @@
 # @d/create
 
+## 3.0.10
+
+### Patch Changes
+
+- 增加小程序脚手架仓库
+
 ## 3.0.9
 
 ### Patch Changes
